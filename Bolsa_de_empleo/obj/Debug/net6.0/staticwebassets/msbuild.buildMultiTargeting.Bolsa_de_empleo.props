@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bolsa_de_empleo.props" />
+</Project>
