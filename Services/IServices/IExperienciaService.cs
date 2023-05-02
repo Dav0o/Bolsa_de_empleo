@@ -9,13 +9,14 @@ namespace Services.IServices
 {
     public interface IExperienciaService
     {
-        IEnumerable<Experiencia> GetExperiencias();
-        Experiencia GetExperienciaById(int id);
+        public Task<List<Experiencia>> GetAll();
 
-        void AddExperiencia(Experiencia experiencia);
+        public Task<Experiencia> GetById(int id);
 
-        void UpdateExperiencia(int id, Experiencia experiencia);
+        public Task<Experiencia> Create(Experiencia experiencia);
 
-        void DeleteExperiencia(int id);
+        public Task Update(Experiencia experiencia);
+
+        public Task Delete(int id);
     }
 }

@@ -9,13 +9,14 @@ namespace Services.IServices
 {
     public interface IFormacion_AcademicaService
     {
-        IEnumerable<Formacion_Academica> GetFormaciones();
-        Formacion_Academica GetFormacionById(int id);
+        public Task<List<Formacion_Academica>> GetAll();
 
-        void AddFormacion(Formacion_Academica formacion);
+        public Task<Formacion_Academica> GetById(int id);
 
-        void UpdateFormacion(int id, Formacion_Academica formacion);
+        public Task<Formacion_Academica> Create(Formacion_Academica formacion);
 
-        void DeleteFormacion(int id);
+        public Task Update(Formacion_Academica formacion);
+
+        public Task Delete(int id);
     }
 }

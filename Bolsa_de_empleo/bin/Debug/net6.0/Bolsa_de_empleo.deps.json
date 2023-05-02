@@ -9,9 +9,11 @@
       "Bolsa_de_empleo/1.0.0": {
         "dependencies": {
           "DataAccess": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Services": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
