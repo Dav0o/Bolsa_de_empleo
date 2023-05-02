@@ -24,6 +24,10 @@ namespace DataAccess.Data
 
         public DbSet<Habilidad> Habilidades { get; set;}
 
+        public DbSet<Empresa> Empresas { get; set; }
+
+        public DbSet<Oferta_Laboral> Ofertas_Laborales { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // One to Many
@@ -49,6 +53,15 @@ namespace DataAccess.Data
                 .HasMany(candidato => candidato.Habilidades)
                 .WithMany(habilidades => habilidades.Candidatos)
                 .UsingEntity(j => j.ToTable("CandidatoHabilidad"));
+
+
+            // One to Many
+            //Empresa -> Ofertas_Labo
+            modelBuilder.Entity<Oferta_Laboral>()
+            .HasOne<Empresa>(ofertas => ofertas.Empresa)
+            .WithMany(empresa => empresa.Ofertas)
+            .HasForeignKey(k => k.EmpresaId);
+
         }
     }
 }
