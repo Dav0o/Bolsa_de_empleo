@@ -1,5 +1,6 @@
 ﻿using DataAccess.Data;
 using DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 using Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -17,37 +18,38 @@ namespace Services.Services
         {
             _context = context;
         }
-        public void AddExperiencia(Experiencia experiencia)
+        public async Task<Experiencia> Create(Experiencia experiencia)
         {
             _context.Experiencias.Add(experiencia);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+
+            return experiencia;
         }
 
-        public void DeleteExperiencia(int id)
+        public async Task Delete(int id)
         {
-            var experiencia = _context.Experiencias.FirstOrDefault(x => x.Id == id);
-
+            var experiencia = await _context.Experiencias.FirstOrDefaultAsync(u => u.Id == id);
             if (experiencia != null)
             {
                 _context.Experiencias.Remove(experiencia);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public Experiencia GetExperienciaById(int id)
+        public Task<List<Experiencia>> GetAll()
         {
-            return _context.Experiencias.FirstOrDefault(x => x.Id == id);
+            return _context.Experiencias.ToListAsync();
         }
 
-        public IEnumerable<Experiencia> GetExperiencias()
+        public async Task<Experiencia> GetById(int id)
         {
-            return _context.Experiencias.ToList();
+            return await _context.Experiencias.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public void UpdateExperiencia(int id, Experiencia experiencia)
+        public async Task Update(Experiencia experiencia)
         {
             _context.Experiencias.Update(experiencia);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

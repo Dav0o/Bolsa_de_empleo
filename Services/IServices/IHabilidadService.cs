@@ -9,13 +9,14 @@ namespace Services.IServices
 {
     public interface IHabilidadService
     {
-        IEnumerable<Habilidad> GetHabilidades();
-        Habilidad GetHabilidadById(int id);
+        public Task<List<Habilidad>> GetAll();
 
-        void AddHabilidad(Habilidad habilidad);
+        public Task<Habilidad> GetById(int id);
 
-        void UpdateHabilidad(int id, Habilidad habilidad);
+        public Task<Habilidad> Create(Habilidad habilidad);
 
-        void DeleteHabilidad(int id);
+        public Task Update(Habilidad habilidad);
+
+        public Task Delete(int id);
     }
 }

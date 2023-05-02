@@ -9,13 +9,17 @@ namespace Services.IRepository
 {
     public interface ICandidatoService
     {
-        IEnumerable<Candidato> GetCandidatos();
-        Candidato GetCandidatoById(int id);
 
-        void AddCandidato(Candidato candidato);
+        public Task<List<Candidato>> GetAll();
 
-        void UpdateCandidato(int id, Candidato candidato);
+        public Task<Candidato> GetById(int id);
 
-        void DeleteCandidato(int id);
+        public Task<Candidato> Create(Candidato candidato);
+
+        public Task Update(Candidato candidato);
+
+        public Task Delete(int id);
+
+
     }
 }

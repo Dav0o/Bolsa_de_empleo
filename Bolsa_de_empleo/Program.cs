@@ -1,22 +1,14 @@
 using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
+using DataAccess;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<MyDbContext>(options =>
-   options.UseSqlServer(builder.Configuration.GetConnectionString("MyApiContext") ?? throw new InvalidOperationException("Connection string 'MyApiContext' not found.")));
+//Add External Dependencies
+builder.Services.AddDataAccess(builder.Configuration);
+builder.Services.AddServices(builder.Configuration);
 
-
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-// Add services to the container.
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy =>
-                      {
-                          policy.AllowAnyOrigin().WithMethods().WithHeaders();
-                      });
-});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

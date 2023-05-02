@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mnYLXGzYY1q+rKqpbggQNAjXbGE0zNWie8OoM2En3ojmgw0w/KMb/jzfbQ4AQqB+KA3OUvDQqzus/hPwxdXn4w==",
+  "dgSpecHash": "A4prctXjoRXjhS4Tn9IQMTiMQqMz/TVTXsEavoUqgYQ3QJQP6RE0WMn1O7l6OrysQZsIgcNdDjxoeCoymNIoFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\javie\\Documents\\UNA 2023\\Primer Semestre\\Programacion IV\\Proyecto 1\\Bolsa_de_empleo\\Bolsa_de_empleo.csproj",
   "expectedPackageFiles": [
@@ -79,5 +79,12 @@
     "C:\\Users\\javie\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\javie\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\javie\\Documents\\UNA 2023\\Primer Semestre\\Programacion IV\\Proyecto 1\\Bolsa_de_empleo\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

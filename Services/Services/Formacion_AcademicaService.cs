@@ -1,5 +1,6 @@
 ﻿using DataAccess.Data;
 using DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 using Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -18,37 +19,38 @@ namespace Services.Services
             _context = context;
         }
 
-        public void AddFormacion(Formacion_Academica formacion)
+        public async Task<Formacion_Academica> Create(Formacion_Academica formacion)
         {
             _context.Formaciones.Add(formacion);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+
+            return formacion;
         }
 
-        public void DeleteFormacion(int id)
+        public async Task Delete(int id)
         {
-            var formacion = _context.Formaciones.FirstOrDefault(c => c.Id == id);
-
+            var formacion = await _context.Formaciones.FirstOrDefaultAsync(u => u.Id == id);
             if (formacion != null)
             {
                 _context.Formaciones.Remove(formacion);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public Formacion_Academica GetFormacionById(int id)
+        public Task<List<Formacion_Academica>> GetAll()
         {
-            return _context.Formaciones.FirstOrDefault(c => c.Id == id);
+            return _context.Formaciones.ToListAsync();
         }
 
-        public IEnumerable<Formacion_Academica> GetFormaciones()
+        public async Task<Formacion_Academica> GetById(int id)
         {
-            return _context.Formaciones.ToList();
+            return await _context.Formaciones.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public void UpdateFormacion(int id, Formacion_Academica formacion)
+        public async Task Update(Formacion_Academica formacion)
         {
             _context.Formaciones.Update(formacion);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

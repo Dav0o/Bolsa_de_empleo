@@ -1,5 +1,6 @@
 ﻿using DataAccess.Data;
 using DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 using Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -17,37 +18,38 @@ namespace Services.Services
         {
             _context = context;
         }
-        public void AddHabilidad(Habilidad habilidad)
+        public async Task<Habilidad> Create(Habilidad habilidad)
         {
             _context.Habilidades.Add(habilidad);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+
+            return habilidad;
         }
 
-        public void DeleteHabilidad(int id)
+        public async Task Delete(int id)
         {
-            var habilidad = _context.Habilidades.FirstOrDefault(h => h.Id == id);
-
-            if(habilidad != null)
+            var habilidad = await _context.Habilidades.FirstOrDefaultAsync(u => u.Id == id);
+            if (habilidad != null)
             {
                 _context.Habilidades.Remove(habilidad);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public Habilidad GetHabilidadById(int id)
+        public Task<List<Habilidad>> GetAll()
         {
-            return _context.Habilidades.FirstOrDefault(h => h.Id == id);
+            return _context.Habilidades.ToListAsync();
         }
 
-        public IEnumerable<Habilidad> GetHabilidades()
+        public async Task<Habilidad> GetById(int id)
         {
-            return _context.Habilidades.ToList();
+            return await _context.Habilidades.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public void UpdateHabilidad(int id, Habilidad habilidad)
+        public async Task Update(Habilidad habilidad)
         {
             _context.Habilidades.Update(habilidad);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

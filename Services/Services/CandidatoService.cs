@@ -19,37 +19,38 @@ namespace Services.Services
             _context = context;
         }
 
-        public void AddCandidato(Candidato candidato)
+        public async Task<Candidato> Create(Candidato candidato)
         {
             _context.Candidatos.Add(candidato);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+
+            return candidato;
         }
 
-        public void DeleteCandidato(int id)
+        public async Task Delete(int id)
         {
-            var candidato = _context.Candidatos.FirstOrDefault(c => c.Id == id);
-
-            if (candidato != null)
+            var candidato = await _context.Candidatos.FirstOrDefaultAsync(u => u.Id == id);
+            if (candidato != null) 
             {
                 _context.Candidatos.Remove(candidato);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public Candidato GetCandidatoById(int id)
+        public Task<List<Candidato>> GetAll()
         {
-            return _context.Candidatos.FirstOrDefault(c => c.Id == id);
+            return _context.Candidatos.ToListAsync();
         }
 
-        public IEnumerable<Candidato> GetCandidatos()
+        public async Task<Candidato> GetById(int id)
         {
-            return _context.Candidatos.ToList();
+            return await _context.Candidatos.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public void UpdateCandidato(int id, Candidato candidato)
+        public async Task Update(Candidato candidato)
         {
             _context.Candidatos.Update(candidato);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }
