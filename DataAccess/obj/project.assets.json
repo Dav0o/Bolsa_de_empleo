@@ -3225,19 +3225,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\javie\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\javie\\Documents\\UNA 2023\\Primer Semestre\\Programacion IV\\Proyecto 1\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\javie\\Documents\\UNA 2023\\Primer Semestre\\Programacion IV\\Proyecto 1\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\javie\\Documents\\UNA 2023\\Primer Semestre\\Programacion IV\\Proyecto 1\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto\\Bolsa_de_empleo\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -13,3 +13,18 @@ C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Programa Bolsa_de_empl
 C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Programa Bolsa_de_empleo\Services\obj\Debug\net6.0\refint\Services.dll
 C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Programa Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.pdb
 C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Programa Bolsa_de_empleo\Services\obj\Debug\net6.0\ref\Services.dll
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\bin\Debug\net6.0\Services.deps.json
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\bin\Debug\net6.0\Services.dll
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\bin\Debug\net6.0\Services.pdb
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.dll
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\refint\Services.dll
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\Services.pdb
+C:\Users\Usuario\Documents\UNA\V Semestre\Programacion IV\Proyecto\Bolsa_de_empleo\Services\obj\Debug\net6.0\ref\Services.dll
