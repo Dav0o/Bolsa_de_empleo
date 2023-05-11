@@ -14,7 +14,8 @@ namespace DataAccess.Models
 
         //Relaciones
 
-        public List<Candidato> Candidatos { get; set; }
+        public List<CandidatoHabilidad> CandidatoHabilidades { get; set; }
+        public List<OfertaHabilidad> OfertaHabilidades { get; set; }
 
     }
 }

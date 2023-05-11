@@ -30,7 +30,8 @@ namespace DataAccess.Models
        
         public List<Experiencia> Experiencias { get; set; }
 
-        public List<Habilidad> Habilidades { get; set; }
+        public List<CandidatoHabilidad> CandidatoHabilidades { get; set; }
+        public List<CandidatoOferta> CandidatoOfertas { get; set; }
     }
 }
 

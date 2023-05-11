@@ -24,6 +24,16 @@ namespace DataAccess.Data
 
         public DbSet<Habilidad> Habilidades { get; set;}
 
+        public DbSet<Empresa> Empresas { get; set; }
+
+        public DbSet<Oferta_Laboral> Ofertas_Laborales { get; set; }
+
+        //Many to many config
+
+        public DbSet<CandidatoHabilidad> CandidatoHabilidad { get; set; } = default!;
+        public DbSet<OfertaHabilidad> OfertaHabilidad { get; set; } = default!;
+        public DbSet<CandidatoOferta> CandidatoOferta { get; set; } = default!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // One to Many
@@ -41,14 +51,60 @@ namespace DataAccess.Data
              .HasForeignKey(k => k.CandidatoId);
 
 
-            // Many to Many
 
-            //Candidato -> Habilidad
+            // One to Many
+            //Empresa -> Ofertas_Labo
+            modelBuilder.Entity<Oferta_Laboral>()
+            .HasOne<Empresa>(ofertas => ofertas.Empresa)
+            .WithMany(empresa => empresa.Ofertas)
+            .HasForeignKey(k => k.EmpresaId);
 
-            modelBuilder.Entity<Candidato>()
-                .HasMany(candidato => candidato.Habilidades)
-                .WithMany(habilidades => habilidades.Candidatos)
-                .UsingEntity(j => j.ToTable("CandidatoHabilidad"));
+            // CandidatoHabilidad
+
+            modelBuilder.Entity<CandidatoHabilidad>()
+            .HasKey(ch => new { ch.CandidatoId, ch.HabilidadId });
+
+            modelBuilder.Entity<CandidatoHabilidad>()
+                .HasOne(ch => ch.Candidato)
+                .WithMany(c => c.CandidatoHabilidades)
+                .HasForeignKey(ch => ch.CandidatoId);
+
+            modelBuilder.Entity<CandidatoHabilidad>()
+                .HasOne(ch => ch.Habilidad)
+                .WithMany(h => h.CandidatoHabilidades)
+                .HasForeignKey(ch => ch.HabilidadId);
+
+            // OfertaHabilidad
+
+            modelBuilder.Entity<OfertaHabilidad>()
+            .HasKey(ch => new { ch.OfertaId, ch.HabilidadId });
+
+            modelBuilder.Entity<OfertaHabilidad>()
+                .HasOne(ch => ch.Oferta)
+                .WithMany(c => c.OfertaHabilidades)
+                .HasForeignKey(ch => ch.OfertaId);
+
+            modelBuilder.Entity<OfertaHabilidad>()
+                .HasOne(ch => ch.Habilidad)
+                .WithMany(h => h.OfertaHabilidades)
+                .HasForeignKey(ch => ch.HabilidadId);
+
+            // CandidatoOferta
+
+            modelBuilder.Entity<CandidatoOferta>()
+            .HasKey(ch => new { ch.CandidatoId, ch.OfertaId });
+
+            modelBuilder.Entity<CandidatoOferta>()
+                .HasOne(ch => ch.Candidato)
+                .WithMany(c => c.CandidatoOfertas)
+                .HasForeignKey(ch => ch.CandidatoId);
+
+            modelBuilder.Entity<CandidatoOferta>()
+                .HasOne(ch => ch.Oferta)
+                .WithMany(h => h.CandidatoOfertas)
+                .HasForeignKey(ch => ch.CandidatoId);
+        
+
         }
     }
 }
