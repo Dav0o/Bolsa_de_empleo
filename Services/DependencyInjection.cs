@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.IRepository;
+using Services.IServices;
 using Services.Services;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Services
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<ICandidatoService, CandidatoService>();
+            services.AddScoped<IHabilidadService, HabilidadService>();
 
             return services;
         }

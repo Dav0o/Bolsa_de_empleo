@@ -1,5 +1,7 @@
-﻿using DataAccess.Data;
+﻿using Bolsa_de_empleo.RequestObjects;
+using DataAccess.Data;
 using DataAccess.Models;
+using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
 using Services.IServices;
 using System;
@@ -18,12 +20,16 @@ namespace Services.Services
         {
             _context = context;
         }
-        public async Task<Habilidad> Create(Habilidad habilidad)
+        public async Task<Habilidad> Create(HabilidadVM habilidadVM)
         {
-            _context.Habilidades.Add(habilidad);
+            Habilidad newHabilidad = new Habilidad();
+            newHabilidad.Id = habilidadVM.Id;
+            newHabilidad.Name = habilidadVM.Name;
+
+            _context.Habilidades.Add(newHabilidad);
             await _context.SaveChangesAsync();
 
-            return habilidad;
+            return newHabilidad;
         }
 
         public async Task Delete(int id)
@@ -46,10 +52,19 @@ namespace Services.Services
             return await _context.Habilidades.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public async Task Update(Habilidad habilidad)
+        public async Task Update(HabilidadVM habilidadVM)
         {
-            _context.Habilidades.Update(habilidad);
-            await _context.SaveChangesAsync();
+            Habilidad newHabilidad = await _context.Habilidades.FindAsync(habilidadVM.Id);
+
+            if (newHabilidad != null)
+            { 
+                newHabilidad.Id = habilidadVM.Id;
+                newHabilidad.Name = habilidadVM.Name;
+
+                _context.Habilidades.Update(newHabilidad);
+                await _context.SaveChangesAsync();
+            }
+                
         }
     }
 }
