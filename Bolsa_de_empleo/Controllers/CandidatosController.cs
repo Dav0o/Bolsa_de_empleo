@@ -1,7 +1,9 @@
-﻿using DataAccess.Models;
+﻿using Bolsa_de_empleo.RequestObjects;
+using DataAccess.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Services.IRepository;
+using System.Runtime.CompilerServices;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -43,24 +45,27 @@ namespace Bolsa_de_empleo.Controllers
 
         [HttpPost]
 
-        public async Task<ActionResult<Candidato>> Create(Candidato candidato)
+        public async Task<ActionResult<Candidato>> Create(CandidatoVM candidatoVM)
         {
-            Candidato newCandidato = await _candidatoService.Create(candidato);
+            Candidato newCandidato = await _candidatoService.Create(candidatoVM);
 
             return Ok(newCandidato);
         }
 
         [HttpPut("{id}")] //pasarlo a que reciba un argumento "id"
 
-        public async Task<IActionResult> Update(Candidato candidato)
+        public async Task<IActionResult> Update(CandidatoVM candidatoVM)
         {
-            if (candidato == null)
+
+            if (candidatoVM == null)
             {
                 return BadRequest();
             }
-            await _candidatoService.Update(candidato);
+            await _candidatoService.Update(candidatoVM);
             return NoContent();
         }
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
