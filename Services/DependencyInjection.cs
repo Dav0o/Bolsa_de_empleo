@@ -18,6 +18,7 @@ namespace Services
             services.AddScoped<ICandidatoService, CandidatoService>();
             services.AddScoped<ICandidatoHabilidadService, CandidatoHabilidadService>();
             services.AddScoped<IHabilidadService, HabilidadService>();
+            services.AddScoped<ICandidatoOfertaService, CandidatoOfertaService>();
 
             return services;
         }
