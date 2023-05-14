@@ -1,4 +1,5 @@
-﻿using DataAccess.Data;
+﻿using Bolsa_de_empleo.RequestObjects;
+using DataAccess.Data;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using Services.IRepository;
@@ -19,12 +20,22 @@ namespace Services.Services
             _context = context;
         }
 
-        public async Task<Candidato> Create(Candidato candidato)
+        public async Task<Candidato> Create(CandidatoVM candidatoVM)
         {
-            _context.Candidatos.Add(candidato);
+            Candidato newCandidato = new Candidato();
+            newCandidato.Id = candidatoVM.Id; //Si se usa SQL server, no hay que llenar id en el swagger
+            newCandidato.Nombre = candidatoVM.Nombre;
+            newCandidato.Apellido1 = candidatoVM.Apellido1;
+            newCandidato.Apellido2 = candidatoVM.Apellido2;
+            newCandidato.Telefono = candidatoVM.Telefono;
+            newCandidato.Correo_Electronico = candidatoVM.Correo_Electronico;
+            newCandidato.Direccion = candidatoVM.Direccion;        
+            newCandidato.Descripcion = candidatoVM.Descripcion;
+
+            _context.Candidatos.Add(newCandidato);
             await _context.SaveChangesAsync();
 
-            return candidato;
+            return newCandidato;
         }
 
         public async Task Delete(int id)
@@ -47,10 +58,24 @@ namespace Services.Services
             return await _context.Candidatos.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public async Task Update(Candidato candidato)
+        public async Task Update(CandidatoVM candidatoVM)
         {
-            _context.Candidatos.Update(candidato);
-            await _context.SaveChangesAsync();
+            Candidato newCandidato = await _context.Candidatos.FindAsync(candidatoVM.Id);
+
+           
+                newCandidato.Nombre = candidatoVM.Nombre;
+                newCandidato.Apellido1 = candidatoVM.Apellido1;
+                newCandidato.Apellido2 = candidatoVM.Apellido2;
+                newCandidato.Telefono = candidatoVM.Telefono;
+                newCandidato.Correo_Electronico = candidatoVM.Correo_Electronico;
+                newCandidato.Direccion = candidatoVM.Direccion;
+                newCandidato.Descripcion = candidatoVM.Descripcion;
+
+                _context.Entry(newCandidato).State = EntityState.Modified;
+                await _context.SaveChangesAsync();// aquí puedes acceder a la variable newCandidato sin problemas
+         
+
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.RequestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,9 @@ namespace Services.IServices
 
         public Task<Habilidad> GetById(int id);
 
-        public Task<Habilidad> Create(Habilidad habilidad);
+        public Task<Habilidad> Create(HabilidadVM habilidadVM);
 
-        public Task Update(Habilidad habilidad);
+        public Task Update(HabilidadVM habilidadVM);
 
         public Task Delete(int id);
     }

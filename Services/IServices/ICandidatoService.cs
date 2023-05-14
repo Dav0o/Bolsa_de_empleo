@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using Bolsa_de_empleo.RequestObjects;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,9 @@ namespace Services.IRepository
 
         public Task<Candidato> GetById(int id);
 
-        public Task<Candidato> Create(Candidato candidato);
+        public Task<Candidato> Create(CandidatoVM candidatoVM);
 
-        public Task Update(Candidato candidato);
+        public Task Update(CandidatoVM candidatoVM);
 
         public Task Delete(int id);
 
