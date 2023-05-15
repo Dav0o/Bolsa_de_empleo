@@ -1,5 +1,6 @@
 ﻿using Bolsa_de_empleo.RequestObjects;
 using DataAccess.Data;
+using DataAccess.ExtensionMethods;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using Services.IRepository;
@@ -23,14 +24,7 @@ namespace Services.Services
         public async Task<Candidato> Create(CandidatoVM candidatoVM)
         {
             Candidato newCandidato = new Candidato();
-            newCandidato.Id = candidatoVM.Id; //Si se usa SQL server, no hay que llenar id en el swagger
-            newCandidato.Nombre = candidatoVM.Nombre;
-            newCandidato.Apellido1 = candidatoVM.Apellido1;
-            newCandidato.Apellido2 = candidatoVM.Apellido2;
-            newCandidato.Telefono = candidatoVM.Telefono;
-            newCandidato.Correo_Electronico = candidatoVM.Correo_Electronico;
-            newCandidato.Direccion = candidatoVM.Direccion;        
-            newCandidato.Descripcion = candidatoVM.Descripcion;
+            newCandidato = candidatoVM.toCandidato();
 
             _context.Candidatos.Add(newCandidato);
             await _context.SaveChangesAsync();

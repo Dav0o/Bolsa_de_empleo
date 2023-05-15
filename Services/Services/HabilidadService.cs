@@ -1,5 +1,6 @@
 ﻿using Bolsa_de_empleo.RequestObjects;
 using DataAccess.Data;
+using DataAccess.ExtensionMethods;
 using DataAccess.Models;
 using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
@@ -23,8 +24,7 @@ namespace Services.Services
         public async Task<Habilidad> Create(HabilidadVM habilidadVM)
         {
             Habilidad newHabilidad = new Habilidad();
-            newHabilidad.Id = habilidadVM.Id;
-            newHabilidad.Name = habilidadVM.Name;
+            newHabilidad = habilidadVM.toHabilidad();
 
             _context.Habilidades.Add(newHabilidad);
             await _context.SaveChangesAsync();
