@@ -58,3 +58,15 @@ C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\DataAccess\bin\Debug
 C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\DataAccess\bin\Debug\net6.0\DataAccess.dll
 C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\DataAccess\bin\Debug\net6.0\DataAccess.pdb
 C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

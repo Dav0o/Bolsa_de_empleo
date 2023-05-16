@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\ProyectoActualizado\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\ProyectoActualizado\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\ProyectoActualizado\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto\\Bolsa_de_empleo\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\ProyectoActualizado\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Rosicela Cubero\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\ProyectoActualizado\\Bolsa_de_empleo\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rosicela Cubero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -69,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -42,30 +42,51 @@ namespace Services.Services
             }
         }
 
-        public Task<List<Candidato>> GetAll()
+        public async Task<List<Candidato>> GetAll()
         {
-            return _context.Candidatos.ToListAsync();
+            var candidatos = await _context.Candidatos.ToListAsync();
+
+            foreach (var candidato in candidatos)
+            {
+                await _context.Entry(candidato)
+                    .Collection(c => c.Formaciones)
+                    .LoadAsync();
+
+                await _context.Entry(candidato)
+                   .Collection(c => c.Experiencias)
+                   .LoadAsync();
+
+                
+            }
+            return candidatos;
         }
 
         public async Task<Candidato> GetById(int id)
         {
-            return await _context.Candidatos.FirstOrDefaultAsync(u => u.Id == id);
+            var candidato = await _context.Candidatos.FindAsync(id);
+
+            if (candidato != null)
+            {
+                await _context.Entry(candidato)
+                    .Collection(c => c.Experiencias)
+                    .LoadAsync();
+
+                await _context.Entry(candidato)
+                    .Collection(c => c.Formaciones)
+                    .LoadAsync();
+            }
+
+            return candidato;
+
         }
 
         public async Task Update(CandidatoVM candidatoVM)
         {
             Candidato newCandidato = await _context.Candidatos.FindAsync(candidatoVM.Id);
+            newCandidato = candidatoVM.toCandidato();
 
-           
-                newCandidato.Nombre = candidatoVM.Nombre;
-                newCandidato.Apellido1 = candidatoVM.Apellido1;
-                newCandidato.Apellido2 = candidatoVM.Apellido2;
-                newCandidato.Telefono = candidatoVM.Telefono;
-                newCandidato.Correo_Electronico = candidatoVM.Correo_Electronico;
-                newCandidato.Direccion = candidatoVM.Direccion;
-                newCandidato.Descripcion = candidatoVM.Descripcion;
 
-                _context.Entry(newCandidato).State = EntityState.Modified;
+            _context.Entry(newCandidato).State = EntityState.Modified;
                 await _context.SaveChangesAsync();// aquí puedes acceder a la variable newCandidato sin problemas
          
 

@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.RequestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,9 @@ namespace Services.IServices
 
         public Task<Empresa> GetById(int id);
 
-        public Task<Empresa> Create(Empresa empresa);
+        public Task<Empresa> Create(EmpresaVM empresaVM);
 
-        public Task Update(Empresa empresa);
+        public Task Update(EmpresaVM empresaVM);
 
         public Task Delete(int id);
 

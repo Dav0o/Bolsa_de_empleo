@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.RequestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,11 @@ namespace Services.IServices
     {
         public Task<List<Experiencia>> GetAll();
 
-        public Task<Experiencia> GetById(int id);
+        public Task<ExperienciaCandidatoVM> GetById(int id);
 
-        public Task<Experiencia> Create(Experiencia experiencia);
+        public Task<Experiencia> Create(ExperienciaVM experienciaVM);
 
-        public Task Update(Experiencia experiencia);
+        public Task Update(ExperienciaVM experienciaVM);
 
         public Task Delete(int id);
     }

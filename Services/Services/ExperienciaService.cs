@@ -1,5 +1,7 @@
 ﻿using DataAccess.Data;
+using DataAccess.ExtensionMethods;
 using DataAccess.Models;
+using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
 using Services.IServices;
 using System;
@@ -18,37 +20,73 @@ namespace Services.Services
         {
             _context = context;
         }
-        public async Task<Experiencia> Create(Experiencia experiencia)
+        public async Task<Experiencia> Create(ExperienciaVM experienciaVM)
         {
-            _context.Experiencias.Add(experiencia);
+            Experiencia newExperiencia = new Experiencia();
+
+            newExperiencia = experienciaVM.toExperiencia();
+
+
+            _context.Experiencias.Add(newExperiencia);
             await _context.SaveChangesAsync();
 
-            return experiencia;
+            return newExperiencia;
         }
 
         public async Task Delete(int id)
         {
             var experiencia = await _context.Experiencias.FirstOrDefaultAsync(u => u.Id == id);
             if (experiencia != null)
-            {
+
                 _context.Experiencias.Remove(experiencia);
-                await _context.SaveChangesAsync();
-            }
+            await _context.SaveChangesAsync();
         }
+
 
         public Task<List<Experiencia>> GetAll()
         {
+
             return _context.Experiencias.ToListAsync();
         }
 
-        public async Task<Experiencia> GetById(int id)
+        public async Task<ExperienciaCandidatoVM> GetById(int id)
         {
-            return await _context.Experiencias.FirstOrDefaultAsync(u => u.Id == id);
+
+            {
+                var experiencia = await _context.Experiencias
+                    .Include(e => e.Candidato)
+                    .FirstOrDefaultAsync(u => u.Id == id);
+
+                if (experiencia != null)
+                {
+                    var experienciaCandidatoVM = new ExperienciaCandidatoVM
+                    {
+                        Id = experiencia.Id,
+                        Rol_Desempeñado = experiencia.Rol_Desempeñado,
+                        Tiempo_Desempeñado = experiencia.Tiempo_Desempeñado,
+                        IdCandidato = experiencia.Candidato.Id,
+                        Nombre = experiencia.Candidato.Nombre,
+                        Apellido1 = experiencia.Candidato.Apellido1,
+                        Apellido2 = experiencia.Candidato.Apellido2
+                    };
+                    return experienciaCandidatoVM;
+                }
+
+                return null;
+            }
+
         }
 
-        public async Task Update(Experiencia experiencia)
+
+        public async Task Update(ExperienciaVM experienciaVM)
         {
-            _context.Experiencias.Update(experiencia);
+
+            Experiencia newExperiencia = new Experiencia();
+
+            newExperiencia = experienciaVM.toExperiencia();
+
+
+            _context.Experiencias.Update(newExperiencia);
             await _context.SaveChangesAsync();
         }
     }

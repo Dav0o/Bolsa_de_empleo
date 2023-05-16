@@ -1,5 +1,6 @@
 ﻿using DataAccess.Data;
 using DataAccess.Models;
+using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
 using Services.IServices;
 using System;
@@ -20,12 +21,21 @@ namespace Services.Services
             _context = context;
         }
 
-        public async Task<Empresa> Create(Empresa empresa)
+        public async Task<Empresa> Create(EmpresaVM empresaVM)
         {
-            _context.Empresas.Add(empresa);
+            Empresa newEmpresa = new Empresa();
+            newEmpresa.Id = empresaVM.Id;
+            newEmpresa.Nombre = empresaVM.Nombre;
+            newEmpresa.Correo_Electronico = empresaVM.Correo_Electronico;
+            newEmpresa.Num_Telefono = empresaVM.Num_Telefono;
+            newEmpresa.Pagina_Web = empresaVM.Pagina_Web;
+            newEmpresa.Direccion = empresaVM.Direccion;
+
+
+            _context.Empresas.Add(newEmpresa);
             await _context.SaveChangesAsync();
 
-            return empresa;
+            return newEmpresa;
         }
 
 
@@ -51,11 +61,23 @@ namespace Services.Services
             return await _context.Empresas.FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public async Task Update(Empresa empresa)
+        public async Task Update(EmpresaVM empresaVM)
         {
-            _context.Empresas.Update(empresa);
+
+            Empresa newEmpresa = new Empresa();
+            newEmpresa.Id = empresaVM.Id;
+            newEmpresa.Nombre = empresaVM.Nombre;
+            newEmpresa.Correo_Electronico = empresaVM.Correo_Electronico;
+            newEmpresa.Num_Telefono = empresaVM.Num_Telefono;
+            newEmpresa.Pagina_Web = empresaVM.Pagina_Web;
+            newEmpresa.Direccion = empresaVM.Direccion;
+
+
+            _context.Entry(newEmpresa).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+
         }
+
 
     }
 }

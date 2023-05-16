@@ -453,3 +453,10 @@ C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\Bolsa_de_empleo\obj\
 C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.csproj.CopyComplete
 C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.genruntimeconfig.cache
 C:\Users\dylan\OneDrive\Escritorio\Proyecto\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\ref\Bolsa_de_empleo.dll
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.csproj.AssemblyReference.cache
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.AssemblyInfoInputs.cache
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.AssemblyInfo.cs
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.csproj.CoreCompileInputs.cache
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rosicela Cubero\PC\Desktop\ProyectoActualizado\Bolsa_de_empleo\Bolsa_de_empleo\obj\Debug\net6.0\Bolsa_de_empleo.MvcApplicationPartsAssemblyInfo.cache

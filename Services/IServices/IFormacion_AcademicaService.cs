@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.RequestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,11 @@ namespace Services.IServices
     {
         public Task<List<Formacion_Academica>> GetAll();
 
-        public Task<Formacion_Academica> GetById(int id);
+        public Task<FormacionCandidatoVM> GetById(int id);
 
-        public Task<Formacion_Academica> Create(Formacion_Academica formacion);
+        public Task<Formacion_Academica> Create(Formacion_Academica formacionVM);
 
-        public Task Update(Formacion_Academica formacion);
+        public Task Update(Formacion_Academica formacionVM);
 
         public Task Delete(int id);
     }
