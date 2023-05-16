@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.RequestOjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,9 @@ namespace Services.IServices
 
         public Task<Oferta_Laboral> GetById(int id);
 
-        public Task<Oferta_Laboral> Create(Oferta_Laboral oferta_Laboral);
+        public Task<Oferta_Laboral> Create(Oferta_LaboralVM oferta_LaboralVM);
 
-        public Task Update(Oferta_Laboral oferta_Laboral);
+        public Task Update(Oferta_LaboralVM oferta_LaboralVM);
 
         public Task Delete(int id);
 
