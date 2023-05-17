@@ -76,7 +76,7 @@ namespace Services.Services
 
         }
 
-        public async Task Update(Formacion_Academica formacionVM)
+        public async Task Update(Formacion_AcademicaVM formacionVM)
         {
             Formacion_Academica newFormacion = new Formacion_Academica();
 
@@ -86,6 +86,8 @@ namespace Services.Services
             _context.Formaciones.Update(newFormacion);
             await _context.SaveChangesAsync();
         }
+
+       
     }
 
 }

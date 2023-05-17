@@ -22,6 +22,8 @@ namespace Services
             services.AddScoped<IFormacion_AcademicaService, Formacion_AcademicaService>();
             services.AddScoped<IExperienciaService, ExperienciaService>();
             services.AddScoped<IEmpresaService, EmpresaService>();
+            services.AddScoped<IOfertaHabilidadService, OfertaHabilidadService>();
+            services.AddScoped<IOferta_LaboralService, Oferta_LaboralService>();
 
             return services;
         }

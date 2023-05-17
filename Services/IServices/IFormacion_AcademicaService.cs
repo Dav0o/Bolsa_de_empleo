@@ -14,9 +14,9 @@ namespace Services.IServices
 
         public Task<FormacionCandidatoVM> GetById(int id);
 
-        public Task<Formacion_Academica> Create(Formacion_Academica formacionVM);
+        public Task<Formacion_Academica> Create(Formacion_AcademicaVM formacionVM);
 
-        public Task Update(Formacion_Academica formacionVM);
+        public Task Update(Formacion_AcademicaVM formacionVM);
 
         public Task Delete(int id);
     }

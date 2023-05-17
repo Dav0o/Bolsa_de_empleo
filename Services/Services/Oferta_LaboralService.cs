@@ -1,4 +1,5 @@
 ﻿using DataAccess.Data;
+using DataAccess.ExtensionMethods;
 using DataAccess.Models;
 using DataAccess.RequestOjects;
 using Microsoft.EntityFrameworkCore;
@@ -42,9 +43,23 @@ namespace Services.Services
             }
         }
 
-        public Task<List<Oferta_Laboral>> GetAll()
+        public async Task<List<Oferta_Laboral>> GetAll()
         {
-            return _context.Ofertas_Laborales.ToListAsync();
+            var ofertas = await _context.Ofertas_Laborales.ToListAsync();
+
+            foreach (var oferta in ofertas)
+            {
+                await _context.Entry(oferta)
+                    .Collection(c => c.OfertaHabilidades)
+                    .LoadAsync();
+
+                await _context.Entry(oferta)
+                   .Collection(c => c.CandidatoOfertas)
+                   .LoadAsync();
+
+
+            }
+            return ofertas;
         }
 
         public async Task<Oferta_Laboral> GetById(int id)

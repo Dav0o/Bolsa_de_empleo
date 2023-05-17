@@ -17,9 +17,8 @@ namespace DataAccess.RequestOjects
 
         public string Responsabilidades { get; set; }
 
-        public Oferta_Laboral toOferta_Laboral()
-        {
-            throw new NotImplementedException();
-        }
+        public int EmpresaId { get; set; }
+
+       
     }
 }

@@ -18,6 +18,7 @@ namespace DataAccess.ExtensionMethods
             oferta_Laboral.Descripcion_Puesto = obj.Descripcion_Puesto;
             oferta_Laboral.Experiencia_Necesaria = obj.Experiencia_Necesaria;
             oferta_Laboral.Responsabilidades = obj.Responsabilidades;
+            oferta_Laboral.EmpresaId = obj.EmpresaId;
 
 
             return oferta_Laboral;

@@ -56,7 +56,15 @@ namespace Services.Services
                    .Collection(c => c.Experiencias)
                    .LoadAsync();
 
-                
+                await _context.Entry(candidato)
+                   .Collection(c => c.CandidatoHabilidades)
+                   .LoadAsync();
+
+                await _context.Entry(candidato)
+                   .Collection(c => c.CandidatoOfertas)
+                   .LoadAsync();
+
+
             }
             return candidatos;
         }
@@ -89,8 +97,7 @@ namespace Services.Services
             _context.Entry(newCandidato).State = EntityState.Modified;
                 await _context.SaveChangesAsync();// aquí puedes acceder a la variable newCandidato sin problemas
          
-
-            
+    
         }
     }
 }

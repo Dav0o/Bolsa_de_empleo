@@ -50,9 +50,19 @@ namespace Services.Services
         }
 
 
-        public Task<List<Empresa>> GetAll()
+        public async Task<List<Empresa>> GetAll()
         {
-            return _context.Empresas.ToListAsync();
+            var empresas = await _context.Empresas.ToListAsync();
+
+            foreach (var empresa in empresas)
+            {
+                await _context.Entry(empresa)
+                    .Collection(c => c.Ofertas)
+                    .LoadAsync();
+
+         
+            }
+            return empresas;
         }
 
 
