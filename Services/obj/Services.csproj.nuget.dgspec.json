@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\Services\\Services.csproj": {}
+    "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Rosicela Cubero\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rosicela Cubero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,21 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\Services\\Services.csproj": {
+    "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\Services\\obj\\",
+        "projectPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Rosicela Cubero\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rosicela Cubero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,8 +101,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -142,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

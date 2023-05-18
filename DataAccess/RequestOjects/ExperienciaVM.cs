@@ -10,7 +10,7 @@ namespace DataAccess.RequestObjects
     public class ExperienciaVM
     {
        
-
+        public int Id { get; set; }
         public string Rol_Desempeñado { get; set; }
 
         public string Tiempo_Desempeñado { get; set; }

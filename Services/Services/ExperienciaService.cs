@@ -22,7 +22,7 @@ namespace Services.Services
         }
         public async Task<Experiencia> Create(ExperienciaVM experienciaVM)
         {
-            Experiencia newExperiencia = new Experiencia();
+            Experiencia newExperiencia; 
 
             newExperiencia = experienciaVM.toExperiencia();
 
@@ -81,13 +81,17 @@ namespace Services.Services
         public async Task Update(ExperienciaVM experienciaVM)
         {
 
-            Experiencia newExperiencia = new Experiencia();
+            var experiencia = await _context.Experiencias.FirstOrDefaultAsync(u => u.Id == experienciaVM.Id);
 
-            newExperiencia = experienciaVM.toExperiencia();
+            if (experiencia != null)
+            {
 
+                experiencia = experienciaVM.toExperiencia();
 
-            _context.Experiencias.Update(newExperiencia);
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            }
         }
+
     }
+
 }

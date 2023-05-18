@@ -2,6 +2,7 @@
 using DataAccess.Data;
 using DataAccess.ExtensionMethods;
 using DataAccess.Models;
+using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
 using Services.IRepository;
 using System;
@@ -90,14 +91,14 @@ namespace Services.Services
 
         public async Task Update(CandidatoVM candidatoVM)
         {
-            Candidato newCandidato = await _context.Candidatos.FindAsync(candidatoVM.Id);
+
+
+            Candidato newCandidato;
             newCandidato = candidatoVM.toCandidato();
 
 
             _context.Entry(newCandidato).State = EntityState.Modified;
-                await _context.SaveChangesAsync();// aquí puedes acceder a la variable newCandidato sin problemas
-         
-    
+            await _context.SaveChangesAsync();
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Services.Services
             if (newHabilidad != null)
             { 
                 newHabilidad.Id = habilidadVM.Id;
-                newHabilidad.Name = habilidadVM.Name;
+                newHabilidad.Nombre = habilidadVM.Nombre;
 
                 _context.Habilidades.Update(newHabilidad);
                 await _context.SaveChangesAsync();

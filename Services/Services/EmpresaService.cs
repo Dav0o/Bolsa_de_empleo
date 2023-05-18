@@ -1,4 +1,5 @@
 ﻿using DataAccess.Data;
+using DataAccess.ExtensionMethods;
 using DataAccess.Models;
 using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
@@ -23,13 +24,8 @@ namespace Services.Services
 
         public async Task<Empresa> Create(EmpresaVM empresaVM)
         {
-            Empresa newEmpresa = new Empresa();
-            newEmpresa.Id = empresaVM.Id;
-            newEmpresa.Nombre = empresaVM.Nombre;
-            newEmpresa.Correo_Electronico = empresaVM.Correo_Electronico;
-            newEmpresa.Num_Telefono = empresaVM.Num_Telefono;
-            newEmpresa.Pagina_Web = empresaVM.Pagina_Web;
-            newEmpresa.Direccion = empresaVM.Direccion;
+            Empresa newEmpresa;
+            newEmpresa = empresaVM.toEmpresa();
 
 
             _context.Empresas.Add(newEmpresa);
@@ -52,6 +48,7 @@ namespace Services.Services
 
         public async Task<List<Empresa>> GetAll()
         {
+
             var empresas = await _context.Empresas.ToListAsync();
 
             foreach (var empresa in empresas)
@@ -60,10 +57,11 @@ namespace Services.Services
                     .Collection(c => c.Ofertas)
                     .LoadAsync();
 
-         
+
             }
             return empresas;
         }
+
 
 
         public async Task<Empresa> GetById(int id)
@@ -74,14 +72,8 @@ namespace Services.Services
         public async Task Update(EmpresaVM empresaVM)
         {
 
-            Empresa newEmpresa = new Empresa();
-            newEmpresa.Id = empresaVM.Id;
-            newEmpresa.Nombre = empresaVM.Nombre;
-            newEmpresa.Correo_Electronico = empresaVM.Correo_Electronico;
-            newEmpresa.Num_Telefono = empresaVM.Num_Telefono;
-            newEmpresa.Pagina_Web = empresaVM.Pagina_Web;
-            newEmpresa.Direccion = empresaVM.Direccion;
-
+            Empresa newEmpresa;
+            newEmpresa = empresaVM.toEmpresa();
 
             _context.Entry(newEmpresa).State = EntityState.Modified;
             await _context.SaveChangesAsync();

@@ -14,8 +14,9 @@ namespace DataAccess.ExtensionMethods
             public static Formacion_Academica toFormacion_Academica(this Formacion_AcademicaVM obj)
             {
                 Formacion_Academica newFormaciones = new Formacion_Academica();
-                newFormaciones.Nombre = obj.Nombre;
-                newFormaciones.Tipo = obj.Tipo;
+                newFormaciones.Titulo = obj.Titulo;
+                newFormaciones.Tiempo_Empleado = obj.Tiempo_Empleado;
+                newFormaciones.Fecha_Culminacion = obj.Fecha_Culminacion;
                 newFormaciones.CandidatoId = obj.CandidatoId;
                
 

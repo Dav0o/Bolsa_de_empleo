@@ -10,8 +10,9 @@ namespace DataAccess.RequestObjects
     {
 
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Tipo { get; set; }
+        public string Titulo { get; set; }
+        public string Tiempo_Empleado { get; set; }
+        public string Fecha_Culminacion { get; set; }
         public int IdCandidato { get; set; }
         public string NombreCandidato { get; set; }
         public string Apellido1 { get; set; }

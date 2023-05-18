@@ -9,11 +9,12 @@ namespace DataAccess.RequestObjects
 {
     public class Formacion_AcademicaVM
     {
-       
-     
-        public string Nombre { get; set; }
 
-        public string Tipo { get; set; }
+        public int Id { get; set; }
+        public string Titulo { get; set; }
+        public string Tiempo_Empleado { get; set; }
+
+        public string Fecha_Culminacion { get; set; }
 
         public int CandidatoId { get; set; }
 

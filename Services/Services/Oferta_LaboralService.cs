@@ -69,11 +69,9 @@ namespace Services.Services
 
         public async Task Update(Oferta_LaboralVM oferta_LaboralVM)
         {
-            Oferta_Laboral newOferta_Laboral = await _context.Ofertas_Laborales.FindAsync(oferta_LaboralVM.Id);
+            Oferta_Laboral newOferta_Laboral;
 
-            newOferta_Laboral.Descripcion_Puesto = oferta_LaboralVM.Descripcion_Puesto;
-            newOferta_Laboral.Experiencia_Necesaria = oferta_LaboralVM.Experiencia_Necesaria;
-            newOferta_Laboral.Responsabilidades = oferta_LaboralVM.Responsabilidades;
+           newOferta_Laboral = oferta_LaboralVM.toOferta_Laboral();
 
             _context.Entry(newOferta_Laboral).State = EntityState.Modified;
             await _context.SaveChangesAsync();

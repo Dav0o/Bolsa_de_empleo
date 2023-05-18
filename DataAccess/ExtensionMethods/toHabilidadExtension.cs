@@ -14,7 +14,7 @@ namespace DataAccess.ExtensionMethods
         {
             Habilidad habilidad = new Habilidad();
             habilidad.Id = obj.Id;
-            habilidad.Name = obj.Name;
+            habilidad.Nombre = obj.Nombre;
 
             return habilidad;
 

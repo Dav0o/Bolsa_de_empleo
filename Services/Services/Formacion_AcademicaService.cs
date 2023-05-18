@@ -1,4 +1,5 @@
 ﻿using DataAccess.Data;
+using DataAccess.ExtensionMethods;
 using DataAccess.Models;
 using DataAccess.RequestObjects;
 using Microsoft.EntityFrameworkCore;
@@ -24,9 +25,8 @@ namespace Services.Services
         {
             Formacion_Academica newFormacion = new Formacion_Academica();
 
-            newFormacion.Nombre = formacionVM.Nombre;
-            newFormacion.Tipo = formacionVM.Tipo;
-            newFormacion.CandidatoId = formacionVM.CandidatoId;
+            newFormacion = formacionVM.toFormacion_Academica();
+
 
             _context.Formaciones.Add(newFormacion);
             await _context.SaveChangesAsync();
@@ -61,8 +61,9 @@ namespace Services.Services
                     var formacionCandidatoVM = new FormacionCandidatoVM
                     {
                         Id = formacion.Id,
-                        Nombre = formacion.Nombre,
-                        Tipo = formacion.Tipo,
+                        Titulo = formacion.Titulo,
+                        Tiempo_Empleado = formacion.Tiempo_Empleado,
+                        Fecha_Culminacion = formacion.Fecha_Culminacion,
                         IdCandidato = formacion.Candidato.Id,
                         NombreCandidato = formacion.Candidato.Nombre,
                         Apellido1 = formacion.Candidato.Apellido1,
@@ -78,16 +79,21 @@ namespace Services.Services
 
         public async Task Update(Formacion_AcademicaVM formacionVM)
         {
-            Formacion_Academica newFormacion = new Formacion_Academica();
+            var formacion = await _context.Formaciones.FirstOrDefaultAsync(u => u.Id == formacionVM.Id);
 
-            newFormacion.Nombre = formacionVM.Nombre;
-            newFormacion.Tipo = formacionVM.Tipo;
+            if (formacion != null)
+            {
 
-            _context.Formaciones.Update(newFormacion);
-            await _context.SaveChangesAsync();
+                formacion = formacionVM.toFormacion_Academica();
+
+                await _context.SaveChangesAsync();
+
+
+            }
+
+
         }
 
-       
     }
 
 }
