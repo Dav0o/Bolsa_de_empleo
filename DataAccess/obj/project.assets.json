@@ -3376,19 +3376,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rosicela Cubero\\.nuget\\packages\\": {}
+    "C:\\Users\\dylan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto Pr\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Rosicela Cubero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rosicela Cubero\\PC\\Desktop\\API_Proyecto\\Bolsa_de_empleo\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto Pr\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto Pr\\Bolsa_de_empleo\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rosicela Cubero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3447,7 +3447,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
