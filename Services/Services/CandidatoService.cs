@@ -47,7 +47,15 @@ namespace Services.Services
         {
             var candidatos = await _context.Candidatos.ToListAsync();
 
-            foreach (var candidato in candidatos)
+            
+            return candidatos;
+        }
+
+        public async Task<Candidato> GetById(int id)
+        {
+            var candidato = await _context.Candidatos.FindAsync(id);
+
+            if (candidato != null)
             {
                 await _context.Entry(candidato)
                     .Collection(c => c.Formaciones)
@@ -64,25 +72,6 @@ namespace Services.Services
                 await _context.Entry(candidato)
                    .Collection(c => c.CandidatoOfertas)
                    .LoadAsync();
-
-
-            }
-            return candidatos;
-        }
-
-        public async Task<Candidato> GetById(int id)
-        {
-            var candidato = await _context.Candidatos.FindAsync(id);
-
-            if (candidato != null)
-            {
-                await _context.Entry(candidato)
-                    .Collection(c => c.Experiencias)
-                    .LoadAsync();
-
-                await _context.Entry(candidato)
-                    .Collection(c => c.Formaciones)
-                    .LoadAsync();
             }
 
             return candidato;

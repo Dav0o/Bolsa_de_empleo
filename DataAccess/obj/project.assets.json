@@ -3376,19 +3376,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dylan\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto Pr\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto Pr\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dylan\\OneDrive\\Escritorio\\Proyecto Pr\\Bolsa_de_empleo\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\UNA\\V Semestre\\Programacion IV\\Proyecto 5-16\\Bolsa_de_empleo\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

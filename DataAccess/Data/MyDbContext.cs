@@ -102,7 +102,7 @@ namespace DataAccess.Data
             modelBuilder.Entity<CandidatoOferta>()
                 .HasOne(ch => ch.Oferta)
                 .WithMany(h => h.CandidatoOfertas)
-                .HasForeignKey(ch => ch.CandidatoId);
+                .HasForeignKey(ch => ch.OfertaId);
         
 
         }
